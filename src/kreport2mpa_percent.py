@@ -71,7 +71,7 @@ def process_kraken_report(curr_str):
     except ValueError:
         return []
     #all_reads = int(split_str[1])
-    all_reads = float(split_str[0])
+    all_reads = float(split_str[0])/100
     level_type = split_str[3]
     #Get name and spaces 
     spaces = 0
