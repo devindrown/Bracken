@@ -70,7 +70,8 @@ def process_kraken_report(curr_str):
         int(split_str[1])
     except ValueError:
         return []
-    all_reads = int(split_str[1])
+    #all_reads = int(split_str[1])
+    all_reads = float(split_str[0])
     level_type = split_str[3]
     #Get name and spaces 
     spaces = 0
@@ -129,7 +130,8 @@ def main():
             level_type = "x"
         elif level_type == "K":
             level_type = "d"
-        level_str = level_type.lower() + "_" + name
+#        level_str = level_type.lower() + "_" + name
+        level_str = level_type.lower() + "__" + name
         #Determine full string to add
         if prev_lvl_num == -1:
             #First level
